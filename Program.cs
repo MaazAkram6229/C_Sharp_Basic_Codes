@@ -1,28 +1,39 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace ConsoleApplication2
+
+namespace ConsoleApplication5
 {
     class Program
     {
         static void Main(string[] args)
         {
-            double input;
-            Console.WriteLine("Enter the input");
-            input = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Returns : {0}", func(input));
+
+            for (int i = 1; i < 6; i++)
+            {
+                Console.Write("{0} ", i);
+            }
+
+            Console.WriteLine();
+
+            for (int i = 1; i < 10; i = i + 2)
+            {
+                Console.Write("{0} ", i);
+            }
+
+            Console.WriteLine();
+
+            for (int i = 1; i < 15; i = i + 3)
+            {
+                Console.Write("{0} ", i);
+            }
+            Console.Read();
         }
-        static int func(double inp)
-        {
-            int ans = (int)(100 * (inp - ((double)((int)Math.Truncate(inp)))));
-            return ans;
-        }
-        static int func2(double inp)
-        {
-            double ans = (inp - Math.Truncate(inp));
-            return Convert.ToInt32(ans);
-        }
+
     }
+
+
 }
